@@ -34,6 +34,7 @@ const MODEL_MAPPING = {
   'gpt-3.5-turbo':  'nvidia/llama-3.1-nemotron-ultra-253b-v1',
   'gpt-4o-mini':    'nvidia/nemotron-3-super-120b-a12b',
   'llama-3.3':      'nvidia/llama-3.3-nemotron-super-49b-v1.5',
+  'Nem 3 ultra':    'nvidia/nemotron-3-ultra-550b-a55b',
 
   // --- Qwen ---
   'gpt-4-faster':  'qwen/qwen3.5-122b-a10b',
