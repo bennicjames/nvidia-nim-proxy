@@ -23,6 +23,7 @@ const ENABLE_THINKING_MODE = process.env.ENABLE_THINKING_MODE === 'true' || fals
 
 // 🎯 MODEL MAPPING — verified against build.nvidia.com/models (May 2025)
 const MODEL_MAPPING = {
+  'kimi':              'moonshotai/kimi-k2.6',
   // --- DeepSeek (confirmed live on NIM) ---
   'deepseek-v4-pro':   'deepseek-ai/deepseek-v4-pro',    // 1M ctx, flagship MoE
   'deepseek-v4-flash': 'deepseek-ai/deepseek-v4-flash',  // 1M ctx, fast 284B MoE
