@@ -33,6 +33,7 @@ const MODEL_MAPPING = {
   // --- NVIDIA Nemotron ---
   'gpt-3.5-turbo':  'nvidia/llama-3.1-nemotron-ultra-253b-v1',
   'gpt-4o-mini':    'nvidia/nemotron-3-super-120b-a12b',
+  'llama-3.3':      'nvidia/llama-3.3-nemotron-super-49b-v1.5',
 
   // --- Qwen ---
   'gpt-4-faster':  'qwen/qwen3.5-122b-a10b',
@@ -117,6 +118,7 @@ const THINKING_MODELS = [
   'mistralai/mistral-small-4-119b-2603',
   'z-ai/glm-5.1',
   'minimaxai/minimax-m2.7',
+  'nvidia/llama-3.3-nemotron-super-49b-v1.5'
 ];
 
 // Health check endpoint
