@@ -75,9 +75,9 @@ function stripUserBreakout(text) {
   let dropping = false;
 
   const userLabels = [
-    /^(User|Human|You|Me|Player)\s*[:：]/i,
+    /^(User|You|Me|Player)\s*[:：]/i,
     /^---+\s*$/,
-    /^\*{0,3}\s*(User|Human|You|Me|Player)\s*\*{0,3}\s*[:：]/i
+    /^\*{0,3}\s*(User|You|Me|Player)\s*\*{0,3}\s*[:：]/i
   ];
 
   for (const line of lines) {
