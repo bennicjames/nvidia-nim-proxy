@@ -50,7 +50,7 @@ const MODEL_MAPPING = {
   'glm-pro':    'z-ai/glm-5.2',
 
   // --- MiniMax (free endpoint) ---
-  'minimax':    'minimaxai/minimax-m2.7',
+  'minimax':    'minimaxai/minimax-m3',
 
   // --- Google ---
   'gemma':      'google/gemma-4-31b-it',
@@ -119,7 +119,7 @@ const THINKING_MODELS = [
   'mistralai/mistral-medium-3.5-128b',
   'mistralai/mistral-small-4-119b-2603',
   'z-ai/glm-5.2',
-  'minimaxai/minimax-m2.7',
+  'minimaxai/minimax-m3',
   'nvidia/llama-3.3-nemotron-super-49b-v1.5'
 ];
 
