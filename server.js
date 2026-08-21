@@ -26,9 +26,9 @@ const MODEL_MAPPING = {
   'kimi':              'moonshotai/kimi-k2.6',
   // --- DeepSeek (confirmed live on NIM) ---
   'deepseek-v4-pro':   'deepseek-ai/deepseek-v4-pro',    // 1M ctx, flagship MoE
-  'deepseek-v4-flash': 'deepseek-ai/deepseek-v4-flash',  // 1M ctx, fast 284B MoE
+  'deepseek-v4-flash': 'deepseek-ai/deepseek-v4-flash-0731',  // 1M ctx, fast 284B MoE
   'gpt-4':             'deepseek-ai/deepseek-v4-pro',
-  'gpt-4o':            'deepseek-ai/deepseek-v4-flash',
+  'gpt-4o':            'deepseek-ai/deepseek-v4-flash-0731',
   'deepseek-d1-dist':  'nicoboss/DeepSeek-R1-Distill-Qwen-32B-Uncensored',
 
   // --- NVIDIA Nemotron ---
@@ -112,7 +112,7 @@ function stripUserBreakout(text) {
 // 🎨 THINKING-CAPABLE MODELS
 const THINKING_MODELS = [
   'deepseek-ai/deepseek-v4-pro',
-  'deepseek-ai/deepseek-v4-flash',
+  'deepseek-ai/deepseek-v4-flash-0731',
   'nvidia/llama-3.1-nemotron-ultra-253b-v1',
   'nvidia/nemotron-3-super-120b-a12b',
   'qwen/qwen3.5-122b-a10b',
@@ -216,7 +216,7 @@ app.post('/v1/chat/completions', async (req, res) => {
         if (modelLower.includes('gpt-4') || modelLower.includes('opus') || modelLower.includes('405b')) {
           nimModel = 'deepseek-ai/deepseek-v4-pro';
         } else if (modelLower.includes('claude') || modelLower.includes('gemini') || modelLower.includes('70b')) {
-          nimModel = 'deepseek-ai/deepseek-v4-flash';
+          nimModel = 'deepseek-ai/deepseek-v4-flash-0731';
         } else {
           nimModel = 'mistralai/mistral-medium-3.5-128b'; // Free endpoint default
         }
