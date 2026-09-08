@@ -61,12 +61,7 @@ const MODEL_MAPPING = {
 };
 
 // 🛡️ ROLEPLAY GUARD - Injected into every request to prevent the model from speaking as the user
-const RP_GUARD_INSTRUCTION = `You are ONLY the character described in the system prompt or conversation. Follow these rules strictly:
-- You ONLY speak, act, and think as the character. You do NEVER write or generate any dialogue, actions, or thoughts for the user or any other character that the user is playing.
-- Do NOT use labels like "User:", "Human:", "You:" or any prefix to simulate the user's side of the conversation.
-- Do NOT continue the conversation by inventing what the user says or does next.
-- Stop your response immediately after your character(s)'s turn(s) end.
-- If you feel the scene needs a reaction from the user, end your response and wait.`;
+const RP_GUARD_INSTRUCTION = ``;
 
 // 🛡️ ROLEPLAY GUARD - Strips any text where the model broke character and started writing as the user
 function stripUserBreakout(text) {
