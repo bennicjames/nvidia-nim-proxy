@@ -25,9 +25,9 @@ const ENABLE_THINKING_MODE = process.env.ENABLE_THINKING_MODE === 'true' || fals
 const MODEL_MAPPING = {
   'kimi':              'moonshotai/kimi-k2.6',
   // --- DeepSeek (confirmed live on NIM) ---
-  'deepseek-v4-pro':   'deepseek-ai/deepseek-v4-pro',    // 1M ctx, flagship MoE
+  'deepseek-v4-pro':   'deepseek-ai/deepseek-v4-pro-0813',    // 1M ctx, flagship MoE
   'deepseek-v4-flash': 'deepseek-ai/deepseek-v4-flash-0731',  // 1M ctx, fast 284B MoE
-  'gpt-4':             'deepseek-ai/deepseek-v4-pro',
+  'gpt-4':             'deepseek-ai/deepseek-v4-pro-0813',
   'gpt-4o':            'deepseek-ai/deepseek-v4-flash-0731',
   'deepseek-d1-dist':  'nicoboss/DeepSeek-R1-Distill-Qwen-32B-Uncensored',
 
@@ -106,7 +106,7 @@ function stripUserBreakout(text) {
 
 // 🎨 THINKING-CAPABLE MODELS
 const THINKING_MODELS = [
-  'deepseek-ai/deepseek-v4-pro',
+  'deepseek-ai/deepseek-v4-pro-0813',
   'deepseek-ai/deepseek-v4-flash-0731',
   'nvidia/llama-3.1-nemotron-ultra-253b-v1',
   'nvidia/nemotron-3-super-120b-a12b',
@@ -144,7 +144,7 @@ app.get('/', (req, res) => {
       chat: '/v1/chat/completions'
     },
     featured_models: {
-      best_quality: 'gpt-4 → deepseek-v4-pro (1M ctx)',
+      best_quality: 'gpt-4 → deepseek-ai/deepseek-v4-pro-0813 (1M ctx)',
       balanced: 'gpt-4o → deepseek-v4-flash (fast MoE)',
       fastest: 'mistral-medium → mistral-medium-3.5 (free)'
     }
@@ -209,7 +209,7 @@ app.post('/v1/chat/completions', async (req, res) => {
       if (!nimModel) {
         const modelLower = model.toLowerCase();
         if (modelLower.includes('gpt-4') || modelLower.includes('opus') || modelLower.includes('405b')) {
-          nimModel = 'deepseek-ai/deepseek-v4-pro';
+          nimModel = 'deepseek-ai/deepseek-v4-pro-0813';
         } else if (modelLower.includes('claude') || modelLower.includes('gemini') || modelLower.includes('70b')) {
           nimModel = 'deepseek-ai/deepseek-v4-flash-0731';
         } else {
