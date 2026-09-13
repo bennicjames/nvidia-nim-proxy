@@ -42,7 +42,7 @@ const MODEL_MAPPING = {
 
   // --- Mistral (free endpoints) ---
   'mistral-medium':  'mistralai/mistral-medium-3.5-128b',
-  'mistral-small':   'mistralai/mistral-small-4-119b-2603',
+  'kimi-k3':   'moonshotai/kimi-k3',
   'gemini-pro':      'mistralai/mistral-medium-3.5-128b',
 
   // --- GLM (Z.ai, free endpoint) ---
@@ -112,7 +112,7 @@ const THINKING_MODELS = [
   'nvidia/nemotron-3-super-120b-a12b',
   'qwen/qwen3.5-122b-a10b',
   'mistralai/mistral-medium-3.5-128b',
-  'mistralai/mistral-small-4-119b-2603',
+  'moonshotai/kimi-k3',
   'z-ai/glm-5.2',
   'minimaxai/minimax-m3',
   'nvidia/llama-3.3-nemotron-super-49b-v1.5'
