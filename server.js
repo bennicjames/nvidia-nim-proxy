@@ -46,7 +46,7 @@ const MODEL_MAPPING = {
   'moonshotai/kimi-k3':      'moonshotai/kimi-k3',
 
   // --- GLM (Z.ai, free endpoint) ---
-  'glm-fast':   'z-ai/glm-4.7',
+  'glm-fast':   'z-ai/glm-5.3-flash',
   'glm-pro':    'z-ai/glm-5.3',
 
   // --- MiniMax (free endpoint) ---
@@ -113,6 +113,7 @@ const THINKING_MODELS = [
   'qwen/qwen3.5-122b-a10b',
   'moonshotai/kimi-k3',
   'moonshotai/kimi-k3',
+  'z-ai/glm-5.3-flash',
   'z-ai/glm-5.3',
   'minimaxai/minimax-m3',
   'nvidia/llama-3.3-nemotron-super-49b-v1.5'
